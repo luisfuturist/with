@@ -40,7 +40,17 @@
   },
   "type": "module",
   "devDependencies": {
-    "vite": "^4.4.9",
+    "@types/compression": "^1.7.2",
+    "@types/express": "^4.17.17",
+    "@types/node": "^20.4.10",
+    "@types/react": "^18.2.20",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.3.0",
+    "@typescript-eslint/parser": "^6.3.0",
+    "@unocss/preset-uno": "^0.56.4",
+    "@unocss/preset-web-fonts": "^0.56.4",
+    "@unocss/reset": "^0.56.4",
+    "@vitejs/plugin-react": "^4.0.4",
     "compression": "^1.7.4",
     "cross-env": "^7.0.3",
     "eslint": "^8.47.0",
@@ -51,16 +61,7 @@
     "sirv": "^2.0.3",
     "ts-node": "^10.9.1",
     "typescript": "^5.1.6",
-    "@types/compression": "^1.7.2",
-    "@types/express": "^4.17.17",
-    "@types/node": "^20.4.10",
-    "@types/react": "^18.2.20",
-    "@types/react-dom": "^18.2.7",
-    "@typescript-eslint/eslint-plugin": "^6.3.0",
-    "@typescript-eslint/parser": "^6.3.0",
-    "@unocss/reset": "^0.56.4",
-    "@vitejs/plugin-react": "^4.0.4",
-    "@unocss/preset-web-fonts": "^0.56.4",
-    "unocss": "^0.56.4"
+    "unocss": "^0.56.4",
+    "vite": "^4.4.9"
   }
 }
