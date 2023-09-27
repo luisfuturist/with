@@ -1,11 +1,11 @@
 import ReactDOMServer from "react-dom/server";
 import { PageShell } from "./PageShell";
 import { escapeInject, dangerouslySkipEscape } from "vike/server";
-import logoUrl from "/logo-light.png";
+import logoUrl from "/fav-light.png";
 import type { PageContextServer } from "./app";
 import { getMeta } from "./app";
 
-export const passToClient = ["pageProps", "urlPathname", "routeParams"];
+export const passToClient = ["pageProps", "routeParams"];
 
 export async function render(pageContext: PageContextServer) {
   const { Page, pageProps } = pageContext;

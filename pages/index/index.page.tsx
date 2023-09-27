@@ -39,9 +39,11 @@ export function Page() {
     },
   ];
 
+  const email = "contato@luisfloat.com";
+
   return (
     <>
-      <header className="py-16 grid-container h-[20rem]">
+      <header className="py-16 grid-container min-h-[20rem]">
         <div className="container mx-auto text-center max-w-[1000px]">
           <h1 className="text-4xl mb-4 text-gray-2">
             Precisando de um tutor de Inglês?
@@ -66,11 +68,9 @@ export function Page() {
               Telegram <span className="underline">luisfloat</span>
             </a>
 
-            <a
-              className="border-blue-2 font-400 border-1 text-gray-2 py-1 px-2 rounded-[1px]"
-            >
+            <span className="border-blue-2 font-400 border-1 text-gray-2 py-1 px-2 rounded-[1px]">
               Discord <span>luisfloat</span>
-            </a>
+            </span>
           </div>
         </div>
       </header>
@@ -203,12 +203,9 @@ export function Page() {
               </a>
             </li>
             <li className="mb-2">
-            <a
-                target="_blank"
-                className="text-gray-2 flex items-center gap-1"
-              >
+              <span className="text-gray-2 flex items-center gap-1">
                 <i className="bi-discord"></i> Discord: luisfloat
-              </a>
+              </span>
             </li>
             <li className="mb-2">
               <a
@@ -216,7 +213,7 @@ export function Page() {
                 target="_blank"
                 className="text-gray-2 hover:text-azure-2 flex items-center gap-1"
               >
-                <i className="bi-envelope"></i> E-mail: contato@luisfloat.com
+                <i className="bi-envelope"></i> E-mail: {email}
               </a>
             </li>
           </ul>
