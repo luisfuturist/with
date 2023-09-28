@@ -80,6 +80,7 @@ function Nav() {
             type="button"
             className="inline-flex items-center p-2 w-5 h-5 justify-center text-sm text-azure-1 rounded-[1px] md:hidden hover:text-azure-2"
             onClick={toggle}
+            aria-label="Abrir menu"
           >
             <i
               className={`text-1xl ${isVisible ? "bi-dash-lg" : "bi-plus-lg"}`}
