@@ -1,4 +1,4 @@
-import { reports } from "../../data/reports";
+import { testimonies } from "../../data/testimonies";
 
 export function Page() {
   const featuresData = [
@@ -93,7 +93,7 @@ export function Page() {
         </section>
 
         <section className="py-8" id="relatos">
-          <h2 className="text-2xl text-azure-2 mb-2">Relatos Sobre Mim</h2>
+          <h2 className="text-2xl text-azure-2 mb-2">O Que Dizem Sobre Mim</h2>
 
           <p className="text-1xl text-gray-3 mb-4">
             Confira o que dizem sobre mim e minha experiência no aprendizado de
@@ -101,7 +101,7 @@ export function Page() {
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-            {reports.map((person, index) => (
+            {testimonies.map((person, index) => (
               <div
                 key={index}
                 className="bg-white p-4 flex flex-col gap-2 rounded-[4px] border-1 border-gray-8"
