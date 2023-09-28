@@ -117,6 +117,7 @@ export function Page() {
 
         <section className="py-8" id="precos">
           <h2 className="text-2xl mb-6 text-azure-2">Opções de Preços</h2>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
             {pricingOptions.map((option, index) => (
               <div
@@ -144,9 +145,34 @@ export function Page() {
             <div />
             <div />
           </div>
+
+          <div className="mt-4">
+            <p className="text-gray-1">
+              Atualmente aceitamos os seguintes meios de pagamento:
+            </p>
+
+            <ul className="list-disc text-left pl-4 flex flex-col mt-2">
+              <li className="text-gray-2">
+                <strong className="text-gray-1 font-bold">PIX</strong>: Uma
+                opção rápida e popular.
+              </li>
+              <li className="text-gray-2">
+                <strong className="text-gray-1 font-bold">XNO</strong>: Uma
+                criptomoeda alternativa rápida, segura, sem taxa e
+                descentralizada.
+              </li>
+            </ul>
+
+            <p className="mt-4 text-gray-1">
+              Sinta-se à vontade para escolher a opção que melhor atenda às suas
+              necessidades ou entre em contato conosco para discutir outras
+              alternativas de pagamento. Estou aqui para tornar o processo
+              conveniente para você!
+            </p>
+          </div>
         </section>
 
-        <section className="py-4" id="horarios">
+        <section className="pb-4" id="horarios">
           <h2 className="text-2xl text-azure-2 mb-4">
             Horários Flexíveis para Você
           </h2>
