@@ -17,7 +17,7 @@ export function PageShell({
   return (
     <React.StrictMode>
       <PageContextProvider pageContext={pageContext}>
-        <div className="min-h-screen">
+        <div style={{ minHeight: "calc(100vh - 3.5rem)" }}>
           <header className="fixed w-full z-2 top-0 left-0 bg-white border-b border-b-azure-1">
             <Nav />
           </header>
@@ -144,16 +144,21 @@ function Footer() {
           </p>
         </div>
         <div className="flex flex-wrap gap-4">
-          {footerLinks.map((link, i) => (
-            React.createElement(link.href ? "a" : "span", {
-              key: i,
-              href: link.href,
-              target: "_blank",
-              className: `text-gray-1 flex gap-1 items-center ${
-                link.href ? "has-underline" : ""
-              }`,
-            }, <i className={link.icon}></i>, link.label)
-          ))}
+          {footerLinks.map((link, i) =>
+            React.createElement(
+              link.href ? "a" : "span",
+              {
+                key: i,
+                href: link.href,
+                target: "_blank",
+                className: `text-gray-1 flex gap-1 items-center ${
+                  link.href ? "has-underline" : ""
+                }`,
+              },
+              <i className={link.icon}></i>,
+              link.label
+            )
+          )}
         </div>
       </div>
     </footer>
