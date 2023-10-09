@@ -1,19 +1,14 @@
-import "@unocss/reset/tailwind.css";
-import "bootstrap-icons/font/bootstrap-icons.css";
 import React, { useState } from "react";
-import "virtual:uno.css";
-import "./global.css";
-import "./print.css";
-import type { PageContext } from "./app";
+import type { PageContext } from "../renderer/App";
 import { PageContextProvider } from "../hooks/usePageContext";
 
-export function PageShell({
+export default ({
   children,
   pageContext,
 }: {
   children: React.ReactNode;
   pageContext: PageContext;
-}) {
+}) => {
   return (
     <React.StrictMode>
       <PageContextProvider pageContext={pageContext}>

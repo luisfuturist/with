@@ -1,6 +1,6 @@
 import { testimonies } from "../../data/testimonies";
 
-export function Page() {
+export default () => {
   const featuresData = [
     {
       label: "Horário Flexível",

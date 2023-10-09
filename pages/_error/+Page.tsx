@@ -13,7 +13,7 @@ function Layout({ children }: { children: React.ReactNode }) {
   );
 }
 
-export function Page({ is404 }: Page404Props) {
+export default ({ is404 }: Page404Props) => {
   if (is404) {
     return (
       <Layout>

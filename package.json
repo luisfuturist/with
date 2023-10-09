@@ -23,13 +23,9 @@
     "url": "https://github.com/luisfloat/with/issues"
   },
   "scripts": {
-    "dev": "npm run server:dev",
-    "prod": "npm run lint && npm run build && npm run server:prod",
-    "build": "vite build",
-    "server": "node --loader ts-node/esm ./server/index.ts",
-    "server:dev": "npm run server",
-    "server:prod": "cross-env NODE_ENV=production npm run server",
     "lint": "eslint . --max-warnings 0",
+    "dev": "vite",
+    "build": "vite build",
     "preview": "vite build && wrangler dev",
     "deploy": "vite build && wrangler publish",
     "release": "release-it"
@@ -41,7 +37,7 @@
     "lfds-tokens": "luisfloat/lfds-tokens",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "vike": "^0.4.142",
+    "vike": "^0.4.143",
     "wrangler": "^3.10.1"
   },
   "type": "module",
