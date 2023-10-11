@@ -23,6 +23,9 @@ export default {
     keywords: {
       env: "server-only",
     },
+    Layout: {
+      env: 'server-and-client'
+    },
     renderMode: {
       env: "config-only",
       effect({ configDefinedAt, configValue }) {
