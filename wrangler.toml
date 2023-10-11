@@ -1,5 +1,5 @@
 name = "with"
-main="./renderer/worker.ts"
+main="./renderer/worker/index.ts"
 compatibility_date = "2021-09-29"
 workers_dev = true
 

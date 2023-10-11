@@ -1,0 +1,44 @@
+.prose p {
+  @apply mb-2 text-gray-1;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  @apply mt-4 mb-2;
+}
+
+.prose h1 {
+  @apply text-4xl text-azure-2;
+}
+
+.prose h2 {
+  @apply text-3xl;
+}
+
+.prose h3 {
+  @apply text-2xl text-gray-1;
+}
+
+.prose h4 {
+  @apply text-xl;
+}
+
+.prose h5 {
+  @apply text-lg;
+}
+
+.prose h6 {
+  @apply text-base;
+}
+
+.prose strong {
+  @apply font-bold;
+}
+
+.prose ul {
+  @apply list-disc text-left pl-4 flex flex-col mt-2 text-gray-1;
+}

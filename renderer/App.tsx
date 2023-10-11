@@ -20,6 +20,7 @@ export type CustomConfig = Config & {
   description?: string;
   keywords?: string;
   renderMode?: "HTML" | "SSR" | "SPA";
+  Layout: React.FC<any>;
 };
 
 export type PageContextServer = PageContextBuiltInServer<Page> &
@@ -34,9 +35,11 @@ export default (pageContext: PageContext) => {
 
   if(!Page) return null;
 
+  const Layout = pageContext.config.Layout || DefaultLayout;
+
   return (
-    <DefaultLayout pageContext={pageContext}>
+    <Layout pageContext={pageContext}>
       <Page {...pageProps} />
-    </DefaultLayout>
+    </Layout>
   );
 };

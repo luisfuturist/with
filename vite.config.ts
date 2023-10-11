@@ -4,15 +4,18 @@ import UnoCSS from "unocss/vite";
 import { UserConfig } from "vite";
 import presetWebFonts from "@unocss/preset-web-fonts";
 import presetUno from "@unocss/preset-uno";
+import transformerDirectives from "@unocss/transformer-directives";
+import mdx from "@mdx-js/rollup";
 // @ts-ignore
 import tokens from "lfds-tokens";
 
 const config: UserConfig = {
   plugins: [
-    react(),
     vike({
       prerender: true,
     }),
+    mdx(),
+    react(),
     UnoCSS({
       presets: [
         presetUno(),
@@ -27,6 +30,7 @@ const config: UserConfig = {
       theme: {
         colors: tokens.color,
       },
+      transformers: [transformerDirectives()],
     }),
   ],
 };
