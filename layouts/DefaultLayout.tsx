@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import type { PageContext } from "../renderer/App";
 import { PageContextProvider } from "../hooks/usePageContext";
 
@@ -24,7 +24,7 @@ export default ({
       </PageContextProvider>
     </React.StrictMode>
   );
-}
+};
 
 function Brand() {
   return (
@@ -46,24 +46,30 @@ function Nav() {
   const navItems = [
     {
       label: "Relatos",
-      href: "#relatos",
+      href: "/#relatos",
     },
     {
       label: "Preços",
-      href: "#precos",
+      href: "/#precos",
     },
     {
       label: "Horários",
-      href: "#horarios",
+      href: "/#horarios",
     },
     {
       label: "Contato",
-      href: "#contato",
+      href: "/#contato",
     },
   ];
   const [isVisible, setVisible] = useState(false);
 
   const toggle = () => setVisible((s) => !s);
+
+  useEffect(() => {
+    const id = new URL(location.href).hash.replace("#", "");
+    const el = document.getElementById(id);
+    el?.scrollIntoView();
+  }, []);
 
   return (
     <nav className="max-w-[1000px] mx-auto">
