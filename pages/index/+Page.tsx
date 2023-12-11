@@ -62,7 +62,7 @@ export default () => {
             </a>
 
             <a
-              href="https://wa.me/5547999216685"
+              href="https://t.me/luisfloat"
               className="border-azure-2 font-400 border-1 hover:border-azure-4 text-gray-2 py-1 px-2 rounded-[1px]"
             >
               Telegram <span className="underline">luisfloat</span>
