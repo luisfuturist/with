@@ -31,7 +31,7 @@ export default () => {
       price: "R$50",
     },
     {
-      title: "Pacote de 4 horas",
+      title: "Pacote de 4 Aulas",
       description:
         "Economize e profunde seu aprendizado com meu pacote de 4 horas.",
       price: "R$200",
