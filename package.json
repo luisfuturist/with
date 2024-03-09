@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.10",
+    "release-it": "^17.1.1",
     "typescript": "^5.3.3",
     "wrangler": "^3.32.0"
   },
