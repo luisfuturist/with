@@ -1,0 +1,31 @@
+---
+import Icon from './Icon.astro'
+
+interface Props {
+	title: string
+	body: string
+	icon?: string
+}
+
+const { title, body, icon, ...rest } = Astro.props
+---
+
+<div class="py-6 bg-white rounded-lg sm:shadow dark:bg-gray-800" {...rest}>
+	{
+		icon && (
+			<Icon
+				class="w-fit text-4xl text-blue-500 dark:text-blue-500 mb-3"
+				name={icon}
+			/>
+		)
+	}
+
+	<h2
+		class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white"
+	>
+		{title}
+	</h2>
+	<p class="mb-3 font-normal text-gray-500 dark:text-gray-400">
+		{body}
+	</p>
+</div>

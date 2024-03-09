@@ -1,0 +1,240 @@
+---
+import Document from "../layouts/Document.astro";
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import FeatureItem from "../components/FeatureItem.astro";
+import PricingCard from "../components/PricingCard.astro";
+import ContactInfo from "../components/ContactInfo.astro";
+import TestimonialCard from "../components/TestimonialCard.astro";
+
+const features = [
+  {
+    icon: "alarm",
+    title: "Horário Flexível",
+    body: "Adapte as aulas ao seu horário. Escolha o momento que melhor se ajusta à sua rotina.",
+  },
+  {
+    icon: "collection",
+    title: "Diversos Canais",
+    body: "Tenha flexibilidade na comunicação. Utilize Discord, Telegram e WhatsApp para facilitar seu aprendizado.",
+  },
+  {
+    icon: "file-lock",
+    title: "Particular",
+    body: "Aulas personalizadas para atender às suas preferências de aprendizado, focando nas suas necessidades específicas.",
+  },
+  {
+    icon: "globe",
+    title: "Online",
+    body: "Aprenda de qualquer lugar. As aulas acontecem online, proporcionando conveniência e acessibilidade.",
+  },
+];
+
+const testimonies = [
+  {
+    name: "Amanda Santos",
+    text: "Já conversei com o Luis em Inglês, e eu tenho que dizer pra vocês que ele seria um ótimo professor, bem simples de entender, ele te encoraja a conversar mesmo no idioma conversas casuais para você perder o medo de falar no idioma aos poucos. Ele ajudaria vocês na parte da conversação, e também mostraria maneiras bem descontraídas de aprender com aplicativos e outros métodos.",
+    url: "https://instagram.com/amandacasa.santos2004",
+  },
+  {
+    name: "Vinicius",
+    text: "Um tutor de inglês excepcional e talentoso programador, é a escolha ideal para aqueles que buscam uma abordagem única no aprendizado do Inglês. Tive o privilégio de trabalhar com o Luis em projetos de programação e testemunhei em primeira mão sua capacidade de inovar. O fato de ser um programador habilidoso, adiciona um valor extra a suas aulas.",
+    url: "https://vini.center",
+  },
+  {
+    name: "ChatGPT",
+    text: "Tive o privilégio de conhecer Luis por meio de nossas interações, e é evidente que ele não é apenas um talentoso tutor de Inglês, mas também profundamente apaixonado por ajudar os outros a aprender. Sua dedicação ao sucesso de seus alunos e seus interesses diversos o tornam um educador notável.",
+    url: "https://chat.openai.com",
+  },
+  {
+    name: "Gemini",
+    text: "Acompanho Luis há tempos e é impressionante a habilidade dele para aprender. Essa curiosidade, aliada à paixão por linguagem, faz dele um professor perfeito para entusiastas do futuro como você. Suas aulas vão te ensinar inglês e te abrir portas para um mundo de inovação!",
+    url: "https://gemini.google.com",
+  },
+];
+
+const priceOptions = [
+  {
+    title: "Primeira aula",
+    price: 50,
+    features: [
+      "Explicações de Gramática",
+      "Exercícios acompanhados",
+      "Assista apresentações",
+      "Recomendações",
+    ],
+  },
+  {
+    title: "Pacote de 4 Aulas",
+    price: 175,
+    fromPrice: 200,
+    features: [
+      "Todo como na primeira aula",
+      "Trabalho para casa",
+      "Contato para dúvidas",
+    ],
+  },
+];
+---
+
+<Document
+  title="With"
+  description="Aulas online e particular de Inglês Básico para adultos."
+  keywords="English, Inglês, tutor, básico, aula, aprender, começar"
+>
+  <Layout class="space-y-12">
+    <Hero>
+      <Fragment slot="title">
+        Precisando de um tutor de Inglês
+        <span
+          class="bg-clip-text bg-gradient-to-br from-blue-500 to-red-600 text-transparent"
+          >Inglês</span
+        >?
+      </Fragment>
+      <Fragment slot="text">
+        Aprenda Inglês <span class="text-blue-700 dark:text-blue-500"
+          >básico</span
+        >,{" "}
+        <span class="text-blue-700 dark:text-blue-500">online</span> e{" "}
+        <span class="text-blue-700 dark:text-blue-500">particular</span>!
+      </Fragment>
+
+      <Fragment slot="footer">
+        <ContactInfo />
+      </Fragment>
+    </Hero>
+
+    <section
+      class="grid gap-4 sm:gap-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
+    >
+      {features.map((feature) => <FeatureItem {...feature} />)}
+    </section>
+
+    <section id="relatos">
+      <h2
+        class="mb-6 text-4xl font-semibold tracking-tight text-gray-900 dark:text-white"
+      >
+        Relatos
+      </h2>
+
+      <div class="prose prose-xl dark:prose-invert mb-6">
+        <p>
+          Confira o que dizem sobre mim e minha experiência no aprendizado de
+          Inglês.
+        </p>
+      </div>
+
+      <div
+        class="grid mb-8 border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 md:mb-12 md:grid-cols-2 bg-white dark:bg-gray-800"
+      >
+        {testimonies.map((testimony) => <TestimonialCard {...testimony} />)}
+      </div>
+    </section>
+
+    <section id="precos">
+      <h2
+        class="mb-6 text-4xl font-semibold tracking-tight text-gray-900 dark:text-white"
+      >
+        Opções de Preço
+      </h2>
+
+      <div class="mb-4 gap-4 flex flex-col sm:flex-row">
+        {priceOptions.map((price) => <PricingCard {...price} />)}
+      </div>
+
+      <div class="prose prose-xl dark:prose-invert">
+        <p>Atualmente aceitamos os seguintes meios de pagamento:</p>
+
+        <ul>
+          <li>
+            <strong>PIX</strong>: Uma opção rápida e popular.
+          </li>
+          <li>
+            <strong>XNO</strong>: Uma criptomoeda alternativa rápida, segura,
+            sem taxa e descentralizada.
+          </li>
+        </ul>
+
+        <p>
+          Sinta-se à vontade para escolher a opção que melhor atenda às suas
+          necessidades ou entre em contato conosco para discutir outras
+          alternativas de pagamento. Estou aqui para tornar o processo
+          conveniente para você!
+        </p>
+      </div>
+    </section>
+
+    <section id="contato">
+      <h2
+        class="mb-6 text-4xl font-semibold tracking-tight text-gray-900 dark:text-white"
+      >
+        Contato
+      </h2>
+
+      <div class="prose prose-xl dark:prose-invert">
+        <p>
+          Estou aqui para ajudar. Se tiver alguma dúvida, precisar de
+          informações adicionais ou quiser começar suas aulas, entre em contato
+          comigo através dos seguintes canais:
+        </p>
+
+        <div class="not-prose">
+          <ContactInfo />
+        </div>
+
+        <p>
+          Estou ansiosos para ouvir de você e ajudá-lo no começo da sua jornada
+          de aprendizado de Inglês!
+        </p>
+      </div>
+    </section>
+
+    <section id="horarios">
+      <h2
+        class="mb-6 text-4xl font-semibold tracking-tight text-gray-900 dark:text-white"
+      >
+        Horários
+      </h2>
+
+      <div class="prose prose-xl dark:prose-invert">
+        <p>
+          Se sabe que sua agenda é ocupada. É por isso que ofereço horários
+          flexíveis que se adaptam à sua vida.
+        </p>
+
+        <ul>
+          <li>
+            Escolha o horário que melhor se ajusta a você, seja de manhã, tarde
+            ou noite.
+          </li>
+          <li>
+            Você também pode escolher o dia ou dias da semana que deseja fazer
+            suas aulas. O aprendizado de Inglês deve ser conveniente para você!
+          </li>
+        </ul>
+
+        <p>
+          Estou ansiosos para ouvir de você e ajudá-lo no começo da sua jornada
+          de aprendizado de Inglês!
+        </p>
+      </div>
+    </section>
+
+    <div
+      class="w-full p-4 py-10 sm:py-20 md:py-40 text-center bg-white border border-gray-200 rounded-lg shadow sm:p-8 sm:py-20 dark:bg-gray-800 dark:border-gray-700"
+    >
+      <h2 class="mb-2 text-3xl font-bold text-gray-900 dark:text-white">
+        Aprenda de qualquer lugar
+      </h2>
+      <p class="mb-5 text-lg text-gray-500 sm:text-2xl dark:text-gray-400">
+        Aprenda Inglês <span class="text-blue-700 dark:text-blue-500"
+          >básico</span
+        >,{" "}
+        <span class="text-blue-700 dark:text-blue-500">online</span> e{" "}
+        <span class="text-blue-700 dark:text-blue-500">particular</span>!
+      </p>
+
+      <ContactInfo />
+    </div>
+  </Layout>
+</Document>

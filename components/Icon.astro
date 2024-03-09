@@ -1,0 +1,10 @@
+---
+interface Props {
+	name: string
+    class?: string
+}
+
+const { name, class: className, ...rest } = Astro.props
+---
+
+<span role="img" class:list={[`flex items-center justify-center bi-${name}`, className]} {...rest}></span>

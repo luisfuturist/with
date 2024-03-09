@@ -1,0 +1,23 @@
+---
+import Document from "../layouts/Document.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Document
+  title="With | 404"
+  description="Página não encontrada"
+  keywords="English, Inglês, tutor, básico, aula, aprender, começar"
+>
+  <Layout class="flex items-center justify-center flex-col">
+    <h1 class="text-9xl text-orange-500 font-bold">404</h1>
+
+    <p class="text-2xl text-gray-500 dark:text-gray-400 mb-4">Essa página não foi encontrada.</p>
+
+    <a
+      href="/"
+      class="w-fit text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center text-center"
+    >
+      Acessar página inicial
+    </a>
+  </Layout>
+</Document>

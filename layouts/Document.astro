@@ -1,0 +1,103 @@
+---
+import 'bootstrap-icons/font/bootstrap-icons.css'
+import Toast from '../components/Toast'
+
+interface Props {
+	title: string
+	description: string
+	keywords: string
+}
+
+const { title, description, keywords } = Astro.props
+---
+
+<!doctype html>
+<html lang="pt">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="keywords" content={keywords} />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body class="bg-white dark:bg-gray-800">
+		<slot />
+
+    <Toast client:idle />
+	</body>
+</html>
+
+<style is:global>
+	/* reset */
+
+	* {
+		scroll-behavior: smooth;
+	}
+
+	section {
+		scroll-margin-top: 73px;
+	}
+
+	body {
+		font-family: "Roboto", sans-serif;
+	}
+
+	*::selection {
+		@apply bg-blue-700 text-white;
+	}
+
+	::-webkit-scrollbar {
+		width: 6px;
+		z-index: -10;
+	}
+
+	::-webkit-scrollbar-track {
+		background-color: transparent;
+	}
+
+	::-webkit-scrollbar-thumb {
+		@apply bg-blue-700;
+		border-radius: 12px;
+	}
+
+	::-webkit-scrollbar-thumb:hover {
+		@apply bg-blue-800;
+	}
+
+	*:focus {
+		outline: 4px solid;
+		@apply outline-blue-800/50 dark:outline-blue-500/50;
+		border-radius: 4px;
+	}
+
+	*:active {
+		outline: none;
+	}
+
+	a {
+		-webkit-tap-highlight-color: transparent;
+		border-radius: 4px;
+	}
+
+	/* print */
+
+	@page {
+		size: auto;
+		margin: 0mm;
+	}
+
+	@media print {
+		.no-print {
+			display: none !important;
+		}
+	}
+</style>

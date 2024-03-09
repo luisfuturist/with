@@ -1,4 +1,7 @@
-# Termos e Condições
+---
+title: 'Termos e Condições'
+layout: '../layouts/PolicyLayout.astro'
+---
 
 ## 0. Alterações nos Termos e Condições
 

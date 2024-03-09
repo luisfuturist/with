@@ -1,0 +1,51 @@
+---
+import Footer from '../components/Footer.astro'
+import Navbar from '../components/Navbar.astro'
+
+interface Props {
+  class?: string
+}
+
+const { class: className } = Astro.props
+
+const navItems = [
+  { label: 'Home', href: '/' },
+  { label: 'Preços', href: '/#precos' },
+  { label: 'Horários', href: '/#horarios' },
+  { label: 'Contato', href: '/#contato' },
+]
+
+const footerItems = [
+  { label: 'Home', href: '/' },
+  { label: 'Termos e Condições', href: '/termos' },
+]
+---
+
+<header class="fixed top-0 w-full z-[10]">
+  <Navbar brandHref="/" items={navItems}>
+    <Fragment slot="brandName"><span class="font-semibold">With</span> Luis</Fragment>
+  </Navbar>
+</header>
+
+<main class:list={["mt-12 mx-auto px-8 w-full max-w-screen-xl", className]}>
+  <slot />
+</main>
+
+<Footer items={footerItems} />
+
+<style>
+  html,
+  body {
+    height: 100%;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  main {
+    flex: 1 0 auto;
+  }
+  footer {
+    flex-shrink: 0;
+  }
+</style>

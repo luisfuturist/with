@@ -1,0 +1,25 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/node_modules": true,
+    "**/.wrangler": true,
+    "**/dist": true,
+    ".vscode": false
+  },
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    "package.json": "package-lock.json, pnpm-lock.yaml, .gitignore, tsconfig.json, *.d.ts, .release-it.json",
+    "astro.config.mjs": "tailwind.config.*",
+    "wrangler.toml": "wrangler.*, .env*, .*.vars"
+  },
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "typescript.tsdk": "node_modules/typescript/lib"
+}

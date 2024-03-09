@@ -1,0 +1,15 @@
+---
+import Document from './Document.astro'
+import Layout from './Layout.astro'
+
+const { frontmatter } = Astro.props
+---
+
+<Document {...frontmatter}>
+  <Layout class="mt-32">
+    <article class="prose dark:prose-invert mx-auto">
+      <h1>{frontmatter.title}</h1>
+      <slot />
+    </article>
+  </Layout>
+</Document>

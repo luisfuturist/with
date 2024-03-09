@@ -1,79 +1,43 @@
 {
-  "name": "@luisfloat/with",
+  "name": "@luisfuturist/with",
   "version": "0.2.2",
-  "description": "Website to promote my online and private Basic English lessons for adults.",
+  "type": "module",
   "private": true,
-  "keywords": [
-    "english",
-    "tutor",
-    "basics",
-    "start",
-    "lesson",
-    "private",
-    "online"
-  ],
-  "author": "Luis Float <contact@luisfloat.com> (https://luisfloat.com)",
+  "scripts": {
+    "astro": "astro",
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "release": "release-it",
+    "preview": "astro build && wrangler pages dev ./dist",
+    "deploy": "astro build && wrangler pages deploy ./dist",
+    "cf": "wrangler"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.5.6",
+    "@astrojs/cloudflare": "^9.1.0",
+    "@astrojs/preact": "^3.1.1",
+    "@astrojs/tailwind": "^5.1.0",
+    "@preact/signals": "^1.2.2",
+    "astro": "^4.4.13",
+    "bootstrap-icons": "^1.11.3",
+    "clsx": "^2.1.0",
+    "preact": "^10.19.6",
+    "tailwindcss": "^3.4.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.10",
+    "typescript": "^5.3.3",
+    "wrangler": "^3.32.0"
+  },
+  "author": "Luis Emidio <luisfuturist@gmail.com> (https://luisfuturist.com)",
   "license": "UNLICENSED",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/luisfloat/with.git"
+    "url": "git+https://github.com/luisfuturist/with.git"
   },
-  "homepage": "https://github.com/luisfloat/with#readme",
+  "homepage": "https://github.com/luisfuturist/with#readme",
   "bugs": {
-    "url": "https://github.com/luisfloat/with/issues"
-  },
-  "scripts": {
-    "lint": "eslint . --max-warnings 0",
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite build && wrangler dev",
-    "deploy": "vite build && wrangler publish",
-    "release": "release-it"
-  },
-  "dependencies": {
-    "@cloudflare/kv-asset-handler": "^0.3.0",
-    "bootstrap-icons": "^1.11.1",
-    "hono": "^3.7.2",
-    "lfds-tokens": "luisfloat/lfds-tokens",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "vike": "^0.4.143"
-  },
-  "type": "module",
-  "devDependencies": {
-    "@mdx-js/rollup": "^2.3.0",
-    "@types/react": "^18.2.20",
-    "@types/react-dom": "^18.2.7",
-    "@typescript-eslint/eslint-plugin": "^6.3.0",
-    "@typescript-eslint/parser": "^6.3.0",
-    "@unocss/preset-uno": "^0.56.4",
-    "@unocss/preset-web-fonts": "^0.56.4",
-    "@unocss/reset": "^0.56.4",
-    "@unocss/transformer-directives": "^0.56.5",
-    "@vitejs/plugin-react": "^4.0.4",
-    "eslint": "^8.47.0",
-    "eslint-plugin-react": "^7.33.1",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.3",
-    "release-it": "^16.2.1",
-    "typescript": "^5.1.6",
-    "unocss": "^0.56.4",
-    "vite": "^4.4.9",
-    "wrangler": "^3.10.1"
-  },
-  "release-it": {
-    "git": {
-      "commit": true,
-      "tag": true,
-      "tagName": "v${version}"
-    },
-    "github": {
-      "release": true,
-      "releaseName": "Release ${version}",
-      "preRelease": false
-    },
-    "npm": {
-      "publish": false
-    }
+    "url": "https://github.com/luisfuturist/with/issues"
   }
 }

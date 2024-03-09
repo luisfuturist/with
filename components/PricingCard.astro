@@ -1,0 +1,74 @@
+---
+import Icon from './Icon.astro';
+
+interface Props {
+  title: string;
+  price: number;
+  fromPrice?: number;
+  class?: string;
+  features: Array<string>;
+}
+
+const {
+  title,
+  price,
+  fromPrice,
+  features,
+  class: className,
+  ...rest
+} = Astro.props;
+---
+
+<div
+  class:list={[
+    "w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700 flex flex-col justify-between",
+    className,
+  ]}
+  {...rest}
+>
+  <div>
+    <h3 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">
+      {title}
+    </h3>
+
+    <div class="flex gap-4">
+      {
+        fromPrice && (
+          <div class="flex text-red-900 dark:text-red-600 line-through decoration-red-900 items-end">
+            <span class="text-2xl font-semibold">R$</span>
+            <span class="text-3xl font-extrabold tracking-tight">
+              {" "}
+              {fromPrice}
+            </span>
+          </div>
+        )
+      }
+
+      <div class="flex items-baseline text-gray-900 dark:text-green-500">
+        <span class="text-3xl font-semibold">R$</span>
+        <span class="text-5xl font-extrabold tracking-tight"> {price}</span>
+      </div>
+    </div>
+
+    <ul role="list" class="space-y-5 my-7">
+      {
+        features.map((feature) => (
+          <li class="flex items-center">
+            <Icon name="check" class="text-blue-500 dark:text-blue-500 w-4 h-4 text-xl" />
+
+            <span class="text-base font-normal leading-tight text-gray-700 dark:text-gray-400 ms-3">
+              {feature}
+            </span>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+
+  <a
+    href="#contato"
+    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center"
+  >
+    Contato
+  </a>
+</div>
