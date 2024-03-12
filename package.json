@@ -30,15 +30,5 @@
     "release-it": "^17.1.1",
     "typescript": "^5.3.3",
     "wrangler": "^3.32.0"
-  },
-  "author": "Luis Emidio <luisfuturist@gmail.com> (https://luisfuturist.com)",
-  "license": "UNLICENSED",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/luisfuturist/with.git"
-  },
-  "homepage": "https://github.com/luisfuturist/with#readme",
-  "bugs": {
-    "url": "https://github.com/luisfuturist/with/issues"
   }
 }
